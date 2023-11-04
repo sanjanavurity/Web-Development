@@ -56,8 +56,6 @@
             width: 48%; /* Set the width for each password field */
         }
 
-        }
-
         input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="bdate"]
         input[type="password"],
         input[type="email"] {
