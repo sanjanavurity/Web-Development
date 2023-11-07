@@ -2,21 +2,22 @@
 <html>
 <head>
     <title>Simple Login System</title>
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-color:darkcyan;
             text-align: left;
+            background-image: linear-gradient(#fff, seagreen);
         }
+
         .container {
-            max-width: 300px;
-            margin: 0 auto;
-            background: white;
-            padding: 25px;
-            border-radius: 7px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            
+            max-width: 500px;
+            margin: 0 auto;       
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px 0px #888888;
+            background-color: mediumaquamarine;
         }
+
         h2 {
             color: black;
             position: relative;
@@ -25,7 +26,7 @@
             content: '';
             position: absolute;
             top: 50%;
-            width: 35%; 
+            width: 33%; 
             height: 10px;
             background-color: darkcyan;
         }
@@ -37,38 +38,67 @@
         h2::after {
             right: 0;
         }
-        form ,label {
-            display: block;
+
+        form {
+         
+            margin-top: 20px;
+
+        }
+
+        label {
+            display:flex;
             margin: 10px 0;
             color: #333;
+            font-weight: bold;
         }
-        input[type="text"],
-        input[type="password"] {
-            width: 94.5%;
-            padding:10px;
+
+        .password-container input[type="password"] {
+            width: 48%; /* Set the width for each password field */
+        }
+
+        input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="bdate"]
+        input[type="password"],
+        input[type="email"] {
+            width: 100px;
             margin: 5px 0;
-            border: 1.9px solid black;
-            border-radius: 5px;
+            font-size:30px;
+            border: 6px solid gray;
+            border-radius: 20px;
+        }
+        input{
+            height:2em;
+            width:28.5rem;
+            border-radius: 20px;
         }
         input[type="submit"] {
             background-color: darkcyan;
             color: #fff;
-            padding: 10px 10px;
+            padding: 10px 20px;
             border: none;
             border-radius: 3px;
-            width:10rem;
+      width:30.8rem;
             cursor: pointer;
-            font-size: 15px;
-            margin-top: 30px;
+            font-size: 20px;
         }
+        input{
+            padding:0.5rem;
+            padding-right: 30px;
+        
+        }
+
         input[type="submit"]:hover {
             background-color: gray;
         }
-        #error-message {
-            color: red;
-            display: none;
-            margin-top: 10px;
-        }
+
+input[type="checkbox"] {
+    margin: 5px 0;
+    font-size: 5px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: auto;
+}
+
+
     </style>
 </head>
 

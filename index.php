@@ -5,17 +5,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color:darkcyan;
             text-align: left;
+            background-image: linear-gradient(#fff, seagreen);
         }
 
         .container {
             max-width: 500px;
-            margin: 0 auto;
-            background:#fff;
+            margin: 0 auto;       
             padding: 30px;
-            border-radius: 7px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px 0px #888888;
+            background-color: mediumaquamarine;
         }
 
         h2 {
@@ -46,10 +46,10 @@
         }
 
         label {
-            display: block;
+            display:flex;
             margin: 10px 0;
             color: #333;
-            font-weight: 900px;
+            font-weight: bold;
         }
 
         .password-container input[type="password"] {
@@ -63,12 +63,12 @@
             margin: 5px 0;
             font-size:30px;
             border: 6px solid gray;
-            border-radius: 3px;
+            border-radius: 20px;
         }
         input{
             height:2em;
             width:28.5rem;
-            border-radius: 5px;
+            border-radius: 20px;
         }
         input[type="submit"] {
             background-color: darkcyan;
@@ -94,7 +94,7 @@ input[type="checkbox"] {
     margin: 5px 0;
     font-size: 5px;
     border: 1px solid gray;
-    border-radius: 3px;
+    border-radius: 10px;
     width: auto;
 }
 
@@ -105,10 +105,13 @@ input[type="checkbox"] {
     <div class="container">
         <h2 align="center">Sign Up</h2>
 
+
+<form action="connect.php" method="POST" >
+    <div>        
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $name = $_POST['name'];
+            $name = $_POST['Fullname'];
             $username = $_POST['username'];
             $password = $_POST['password'];
             $confirmPassword=$_POST['confirmPassword'];
@@ -127,10 +130,8 @@ input[type="checkbox"] {
             }
         }
         ?>
-<form action="" method="POST" >
-    <div>
-		<label for="name">Name</label>
-		<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+		<label for="Fullname">FullName</label>
+		<input type="text" id="Fullname" name="Fullname" placeholder="Enter your full name" required>
 </div>
 <div>
 		<label for="username">Username</label>
