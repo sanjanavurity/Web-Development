@@ -3,11 +3,15 @@
 <head>
     <title>Simple Login System</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: left;
-            background-image: linear-gradient(#fff, seagreen);
-        }
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background: linear-gradient(to bottom, #fff, seagreen);
+    background-size: 100% 100%;
+}
+
+
 
         .container {
             max-width: 500px;
@@ -53,7 +57,7 @@
         }
 
         .password-container input[type="password"] {
-            width: 48%; /* Set the width for each password field */
+            width: 38%; /* Set the width for each password field */
         }
 
         input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="bdate"]
