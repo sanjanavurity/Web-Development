@@ -4,14 +4,20 @@
     <title>Registration Page</title>
     <style>
         body {
+            height: 100%;
             font-family: Arial, sans-serif;
             text-align: left;
             background-image: linear-gradient(#fff, seagreen);
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
         }
 
         .container {
-            max-width: 500px;
-            margin: 0 auto;       
+            max-width: 500px;      
+            margin: 0,auto; 
             padding: 30px;
             border-radius: 20px;
             box-shadow: 5px 5px 10px 0px #888888;
@@ -19,7 +25,9 @@
         }
 
         h2 {
-            color: black;
+            font-family: "SHOWCARD GOTHIC";
+            font-weight: bolder;
+            color: rgb(43, 68, 43);
             position: relative;
         }
         h2::before, h2::after {
@@ -28,7 +36,7 @@
             top: 50%;
             width: 33%; 
             height: 10px;
-            background-color: darkcyan;
+            background-image: linear-gradient(to right, rgb(43, 68, 43), darkcyan);
         }
 
         h2::before {
@@ -40,20 +48,19 @@
         }
 
         form {
-         
             margin-top: 20px;
 
         }
 
         label {
-            display:flex;
+            display:block;
             margin: 10px 0;
             color: #333;
             font-weight: bold;
         }
 
         .password-container input[type="password"] {
-            width: 48%; /* Set the width for each password field */
+            width: 38%; /* Set the width for each password field */
         }
 
         input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="bdate"]
@@ -61,9 +68,10 @@
         input[type="email"] {
             width: 100px;
             margin: 5px 0;
-            font-size:30px;
+            font-size:16px;
             border: 6px solid gray;
             border-radius: 20px;
+            padding: 10px;
         }
         input{
             height:2em;
@@ -71,14 +79,16 @@
             border-radius: 20px;
         }
         input[type="submit"] {
-            background-color: darkcyan;
-            color: #fff;
+            background-image: linear-gradient(to right, rgb(43, 68, 43), darkcyan);
+            color: black;
+            font-weight: bolder;
             padding: 10px 20px;
             border: none;
             border-radius: 3px;
-      width:30.8rem;
+            width:30.8rem;
             cursor: pointer;
             font-size: 20px;
+            font-family: "SHOWCARD GOTHIC";
         }
         input{
             padding:0.5rem;
@@ -87,27 +97,32 @@
         }
 
         input[type="submit"]:hover {
-            background-color: gray;
+            background-color: #fff, seagreen;
+            transition: background-color 0.3s, color 0.3s;
+            background: linear-gradient(to right, darkcyan, rgb(43, 68, 43)); 
+            color: black; 
+            font-family: "SHOWCARD GOTHIC";
         }
 
 input[type="checkbox"] {
     margin: 5px 0;
-    font-size: 5px;
+    font-size: 15px;
     border: 1px solid gray;
     border-radius: 10px;
     width: auto;
 }
 
-
     </style>
+ <script>
+        function redirectToLogin() {
+            window.location.href = "login.php";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h2 align="center">Sign Up</h2>
-
-
-<form action="connect.php" method="POST" >
-    <div>        
+        <form action="javascript:void(0);" onsubmit="redirectToLogin()">   
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
@@ -118,21 +133,11 @@ input[type="checkbox"] {
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $bdate = $_POST['bdate'];
-            
-            if ($password === $confirmPassword) {
-                // Credentials match, you can proceed with registration
-                // Redirect to the login page after registration
-                header("Location: login.php?username=$username&password=$password");
-                exit;
-            } else {
-                // Passwords don't match, display an error message
-                echo '<div style="color: red;">Passwords do not match. Please try again.</div>';
-            }
+
         }
         ?>
 		<label for="Fullname">FullName</label>
 		<input type="text" id="Fullname" name="Fullname" placeholder="Enter your full name" required>
-</div>
 <div>
 		<label for="username">Username</label>
 		<input type="text" id="username" name="username" placeholder="Enter a username" required>
@@ -172,7 +177,7 @@ input[type="checkbox"] {
 	
 </div>
 
-
+</div>
 
 </form>
 

@@ -23,7 +23,9 @@ html, body {
         }
 
         h2 {
-            color: black;
+            font-family: "SHOWCARD GOTHIC";
+            font-weight: bolder;
+            color: rgb(43, 68, 43);
             position: relative;
         }
         h2::before, h2::after {
@@ -32,7 +34,7 @@ html, body {
             top: 50%;
             width: 33%; 
             height: 10px;
-            background-color: darkcyan;
+            background-image: linear-gradient(to right, rgb(43, 68, 43), darkcyan);
         }
 
         h2::before {
@@ -75,14 +77,16 @@ html, body {
             border-radius: 20px;
         }
         input[type="submit"] {
-            background-color: darkcyan;
-            color: #fff;
+            background-image: linear-gradient(to right, rgb(43, 68, 43), darkcyan);
+            color: black;
+            font-weight: bolder;
             padding: 10px 20px;
             border: none;
             border-radius: 3px;
-      width:30.8rem;
+            width:30.8rem;
             cursor: pointer;
             font-size: 20px;
+            font-family: "SHOWCARD GOTHIC";
         }
         input{
             padding:0.5rem;
@@ -91,7 +95,11 @@ html, body {
         }
 
         input[type="submit"]:hover {
-            background-color: gray;
+            background-color: #fff, seagreen;
+            transition: background-color 0.3s, color 0.3s;
+            background: linear-gradient(to right, darkcyan, rgb(43, 68, 43)); 
+            color: black; 
+            font-family: "SHOWCARD GOTHIC";
         }
 
 input[type="checkbox"] {
