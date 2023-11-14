@@ -62,15 +62,6 @@ html, body {
             width: 38%; /* Set the width for each password field */
         }
 
-        input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="bdate"]
-        input[type="password"],
-        input[type="email"] {
-            width: 100px;
-            margin: 5px 0;
-            font-size:30px;
-            border: 6px solid gray;
-            border-radius: 20px;
-        }
         input{
             height:2em;
             width:28.5rem;

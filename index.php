@@ -63,7 +63,7 @@
             width: 38%; /* Set the width for each password field */
         }
 
-        input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="bdate"]
+        input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="DOB"]
         input[type="password"],
         input[type="email"] {
             width: 100px;
@@ -106,7 +106,7 @@
 
 input[type="checkbox"] {
     margin: 5px 0;
-    font-size: 15px;
+    font-size: 5px;
     border: 1px solid gray;
     border-radius: 10px;
     width: auto;
@@ -122,20 +122,7 @@ input[type="checkbox"] {
 <body>
     <div class="container">
         <h2 align="center">Sign Up</h2>
-        <form action="javascript:void(0);" onsubmit="redirectToLogin()">   
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            $name = $_POST['Fullname'];
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $confirmPassword=$_POST['confirmPassword'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $bdate = $_POST['bdate'];
-
-        }
-        ?>
+        <form action="javascript:void(0);"  onsubmit="redirectToLogin()" method="post">   
 		<label for="Fullname">FullName</label>
 		<input type="text" id="Fullname" name="Fullname" placeholder="Enter your full name" required>
 <div>
@@ -162,8 +149,8 @@ input[type="checkbox"] {
 </div>
 
 <div>
-		<label for="bdate">Date of birth</label>
-		<input type="date" id="bdate" name="bdate" >
+		<label for="DOB">Date of birth</label>
+		<input type="date" id="DOB" name="DOB" >
 </div>
 
 <div>
