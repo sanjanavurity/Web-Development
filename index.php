@@ -60,7 +60,7 @@
         }
 
         .password-container input[type="password"] {
-            width: 38%; /* Set the width for each password field */
+            width: 38%; 
         }
 
         input[type="name"],input[type="username"],input[type="confirmPassword"],input[type="phone"],input[type="DOB"]
@@ -131,7 +131,7 @@ input[type="checkbox"] {
 </div>
 <div>
                 <label for="password">Create Password</label>
-                <input type="password" id="pass" name="password" maxlength="8" placeholder="Enter your password" required>
+                <input type="password" id="password" name="password" maxlength="8" placeholder="Enter your password" required>
     </div>
     <div>
 
@@ -145,7 +145,7 @@ input[type="checkbox"] {
 
 <div>
 		<label for="phone">Phone number</label>
-		<input type="tel" id="phone" name="phone" placeholder="1234567890" required>
+		<input type="int" id="phone" name="phone" placeholder="1234567890" required>
 </div>
 
 <div>

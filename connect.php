@@ -13,7 +13,11 @@ die('Connection Failed : '.$conn->connect_error);
 $stmt = $conn->prepare("insert into test (Fullname, username, password,email,confirmPassword,phone,DOB)values(?, ?, ?, ?, ?, ?,?)");
 $stmt->bind_param("sssssis", $name, $username, $password, $confirmPassword, $email, $phone,$DOB);
 $stmt->execute();
-echo "registration Successfully...";
+if ($stmt->execute()) {
+    echo "Registration successful";
+} else {
+    echo "Error: " . $stmt->error;
+}
 $stmt->close();
 $conn->close();
 }
